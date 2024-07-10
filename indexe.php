@@ -267,6 +267,90 @@ $cities = ["Amman", "Aqaba", "Karak", "Zarqa", "Irbid", "Ajloun"];
 
 
 
+// task 6
+
+// تعريف المصفوفة المرتبطة
+$products = array(
+    "Product1" => 10.50,
+    "Product2" => 20.00,
+    "Product3" => 15.75
+);
+
+// طباعة المصفوفة مرتبة حسب أسماء المنتجات
+ksort($products);
+echo "Sorted by Product Names:\n";
+foreach ($products as $product => $price) {
+    echo "$product: $price\n";
+}
+
+// طباعة المصفوفة مرتبة حسب الأسعار
+asort($products);
+echo "\nSorted by Prices:\n";
+foreach ($products as $product => $price) {
+    echo "$product: $price\n";
+}
+
+// حساب متوسط الأسعار
+$averagePrice = array_sum($products) / count($products);
+echo "\nAverage Price: $averagePrice\n";
+
+// العثور على أغلى منتج
+$mostExpensivePrice = max($products);
+$mostExpensiveProduct = array_search($mostExpensivePrice, $products);
+echo "Most Expensive Product: $mostExpensiveProduct - $mostExpensivePrice\n";
+
+
+// task 7
+
+
+// إنشاء مصفوفة متعددة الأبعاد لتخزين الكتب
+$books = array(
+    array("title" => "Book One", "author" => "Author A", "year" => 2015),
+    array("title" => "Book Two", "author" => "Author B", "year" => 2008),
+    array("title" => "Book Three", "author" => "Author C", "year" => 2020)
+);
+
+// طباعة تفاصيل الكتب التي نشرت بعد عام 2010
+echo "Books published after 2010:\n";
+foreach ($books as $book) {
+    if ($book["year"] > 2010) {
+        echo "Title: " . $book["title"] . ", Author: " . $book["author"] . ", Year: " . $book["year"] . "\n";
+    }
+}
+
+// إضافة كتاب جديد
+$newBook = array("title" => "Book Four", "author" => "Author D", "year" => 2022);
+$books[] = $newBook;
+
+// طباعة المصفوفة المحدثة
+echo "\nUpdated Books Array:\n";
+foreach ($books as $book) {
+    echo "Title: " . $book["title"] . ", Author: " . $book["author"] . ", Year: " . $book["year"] . "\n";
+}
+
+// تحديث مؤلف "Book Two"
+foreach ($books as &$book) {
+    if ($book["title"] == "Book Two") {
+        $book["author"] = "Updated Author";
+    }
+}
+
+// طباعة المصفوفة المحدثة بعد تحديث المؤلف
+echo "\nUpdated Books Array After Author Update:\n";
+foreach ($books as $book) {
+    echo "Title: " . $book["title"] . ", Author: " . $book["author"] . ", Year: " . $book["year"] . "\n";
+}
+
+// فرز الكتب حسب العنوان
+usort($books, function($a, $b) {
+    return strcmp($a["title"], $b["title"]);
+});
+
+// طباعة المصفوفة المرتبة حسب العنوان
+echo "\nBooks Sorted by Title:\n";
+foreach ($books as $book) {
+    echo "Title: " . $book["title"] . ", Author: " . $book["author"] . ", Year: " . $book["year"] . "\n";
+}
 
 
 
