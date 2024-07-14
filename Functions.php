@@ -21,11 +21,11 @@ function isPrime($num) {
 
 $input = 3;
 if (isPrime($input)) {
-    echo "$input هو عدد أولي";
+    echo "$input is a prime number";
 } else {
-    echo "$input ليس عدد أولي";
+    echo "$input is not a prime number";
 }
-echo "<br>";
+echo "<hr>";
 
 // task 2 
 
@@ -37,15 +37,15 @@ function reverseString($input) {
 $input = "remove";
 echo reverseString($input);  
 
-echo "<br>";
+echo "<hr>";
 
 // task 3
 
 function isAllLowerCase($str) {
     if (ctype_lower($str)) {
-        return "سلسلتك النصية صحيحة";
+        return "Your string is correct";
     } else {
-        return "سلسلتك النصية ليست كلها أحرف صغيرة";
+        return "Your string is not all lowercase";
     }
 }
 
@@ -54,7 +54,7 @@ $input = "remove";
 echo isAllLowerCase($input);
 
 
-echo "<br>";
+echo "<hr>";
 
 // task 4
 
@@ -71,7 +71,7 @@ swap($x, $y);
 echo "x = $x, y = $y";  
 
 
-echo "<br>";
+echo "<hr>";
 
 // task 5
 
@@ -91,14 +91,14 @@ function isArmstrongNumber($num) {
 
 $input = 407;
 if (isArmstrongNumber($input)) {
-    echo "$input هو عدد أرمسترونغ";
+    echo "$input is Armstrong number";
 } else {
-    echo "$input ليس عدد أرمسترونغ";
+    echo "$input is not an Armstrong number";
 }
 
 
 
-echo "<br>";
+echo "<hr>";
 
 // task 6
 
@@ -110,15 +110,15 @@ function isPalindrome($str) {
 
 $input = "Eva, can I see bees in a cave?";
 if (isPalindrome($input)) {
-    echo "نعم، إنها باليندروم";
+    echo "Yes, it's Palindrome.";
 } else {
-    echo "لا، ليست باليندروم";
+    echo "No, not Palindrome.";
 }
 
 
 
 
-echo "<br>";
+echo "<hr>";
 
 // task 7
 
